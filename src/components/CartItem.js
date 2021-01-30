@@ -16,13 +16,14 @@ function CartItem() {
         <div className="info-stock">In Stock</div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select name="" id="">
+            <select name="" id="" className="item-quantity-stock">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
           </div>
+          <div className="item-action-divider">|</div>
           <div className="item-delete">
             <button>Delete</button>
           </div>

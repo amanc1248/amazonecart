@@ -11,3 +11,29 @@
 .cartItem-info {
   flex-grow: 1;
 }
+.item-actions {
+  display: flex;
+}
+.item-quantity-stock {
+  padding: 5px 8px;
+}
+.item-quantity-stock:focus {
+  outline: none;
+}
+.item-action-divider {
+  margin: 0 8px;
+}
+.info-title h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: rgb(7, 106, 101);
+}
+.info-stock {
+  color: rgb(7, 106, 101);
+}
+.cartItem-price {
+  font-weight: 500;
+}
+.cartItem-info {
+  margin: 0 15px;
+}
