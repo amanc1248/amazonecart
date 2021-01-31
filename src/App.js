@@ -6,13 +6,13 @@ import CartTotal from "./components/CartTotal";
 import data from "./Data";
 function App() {
   const [cartItems, setCartItems] = useState(data);
-  console.log(cartItems);
+
   return (
     <div className="App">
       <Header title="Amazon Cart"></Header>
       <div className="App_main">
         <CartItems items={cartItems}></CartItems>
-        <CartTotal></CartTotal>
+        <CartTotal items={cartItems}></CartTotal>
       </div>
     </div>
   );
