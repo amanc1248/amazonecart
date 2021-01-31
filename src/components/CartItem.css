@@ -7,6 +7,8 @@
 }
 .cartItem {
   display: flex;
+  padding: 15px 0;
+  border-bottom: 2px solid rgb(232, 228, 228);
 }
 .cartItem-info {
   flex-grow: 1;
@@ -33,7 +35,19 @@
 }
 .cartItem-price {
   font-weight: 500;
+  margin-left: 16px;
 }
 .cartItem-info {
   margin: 0 15px;
+}
+.cartItem-Image {
+  width: 180px;
+  height: 180px;
+  /* below code simply means, donot grow or shrink the div at all */
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.cartItem-Image img {
+  object-fit: contain;
+  width: 100%;
 }

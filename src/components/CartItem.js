@@ -1,19 +1,19 @@
 import React from "react";
 import "./CartItem.css";
-function CartItem() {
+function CartItem({ title, stock, image, price, quantity }) {
   return (
     <div className="cartItem">
       <div className="cartItem-Image">
         <img
-          src="https://m.media-amazon.com/images/I/81SGb5l+lZL._AC_UY218_.jpg"
-          alt="amazonIpadPro"
+          src={process.env.PUBLIC_URL + "/items/" + image}
+          alt="cartproduct"
         />
       </div>
       <div className="cartItem-info">
         <div className="info-title">
-          <h2>Apple Ipad Pro</h2>
+          <h2>{title}</h2>
         </div>
-        <div className="info-stock">In Stock</div>
+        <div className="info-stock">{stock}</div>
         <div className="item-actions">
           <div className="item-quantity">
             <select name="" id="" className="item-quantity-stock">
@@ -29,7 +29,7 @@ function CartItem() {
           </div>
         </div>
       </div>
-      <div className="cartItem-price">$769.00</div>
+      <div className="cartItem-price">${price}</div>
     </div>
   );
 }
