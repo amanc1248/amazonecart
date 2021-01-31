@@ -1,19 +1,30 @@
 import React from "react";
 import "./CartTotal.css";
-import data from "../Data";
 
 function CartTotal({ items }) {
-  // Here while calculating the total price why Naz has not converted the price which is in string into the integer
-  var theTotalPrice = 0;
-  const itemPrice = items.map((item) => {
-    return (theTotalPrice += parseInt(item.price) * parseInt(item.quantity));
-  });
-  console.log(itemPrice);
+  // Calculating the total price 👇👇
+  const getTotalPrice = () => {
+    // Here while calculating the total price why Naz has not converted the price which is in string into the integer
+    var theTotalPrice = 0;
+    items.map((item) => {
+      return (theTotalPrice += item.price * item.quantity);
+    });
+    return theTotalPrice;
+  };
+
+  // For total cart Items
+  const getTotalCartItems = () => {
+    var totalCartItems = 0;
+    items.forEach((item) => {
+      return (totalCartItems += item.quantity);
+    });
+    return totalCartItems;
+  };
   return (
     <div className="cartTotal">
       <h3>
-        Subtotal({items.length} items)
-        <span className="cart-total-price">${theTotalPrice}</span>
+        Subtotal({getTotalCartItems()} items)
+        <span className="cart-total-price">${getTotalPrice().toFixed(2)}</span>
       </h3>
       <button>Proceed To Checkout</button>
     </div>
