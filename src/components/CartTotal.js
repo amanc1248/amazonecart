@@ -16,7 +16,7 @@ function CartTotal({ items }) {
   const getTotalCartItems = () => {
     let totalCartItems = 0;
     items.forEach((item) => {
-      return (totalCartItems += item.quantity);
+      return (totalCartItems += parseInt(item.quantity));
     });
 
     return totalCartItems;

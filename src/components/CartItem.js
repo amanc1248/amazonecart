@@ -7,7 +7,8 @@ function CartItem({
   price,
   quantity,
   changeCartQuantity,
-  index
+  deleteCartItem,
+  index,
 }) {
   return (
     <div className="cartItem">
@@ -25,12 +26,10 @@ function CartItem({
         <div className="item-actions">
           <div className="item-quantity">
             <select
-              name=""
-              id=""
               value={quantity}
               className="item-quantity-stock"
               onChange={(e) => {
-                changeCartQuantity(e,index);
+                changeCartQuantity(e, index);
               }}
             >
               <option value="1">Qty: 1</option>
@@ -38,14 +37,15 @@ function CartItem({
               <option value="3">Qty: 3</option>
               <option value="4">Qty: 4</option>
               <option value="5">Qty: 5</option>
-              <option value="2">Qty: 2</option>
-              <option value="3">Qty: 3</option>
-              <option value="4">Qty: 4</option>
+              <option value="6">Qty: 6</option>
+              <option value="7">Qty: 7</option>
+              <option value="8">Qty: 8</option>
             </select>
           </div>
           <div className="item-action-divider">|</div>
           <div className="item-delete">
-            <button>Delete</button>
+            {/* 👉👉👉you got to understand here, why are we doing .bind and this */}
+            <button onClick={deleteCartItem.bind(this, index)}>Delete</button>
           </div>
         </div>
       </div>
