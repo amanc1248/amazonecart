@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header title="Amazon Cart"></Header>
       <div className="App_main">
-        <CartItems items={cartItems}></CartItems>
+        <CartItems items={cartItems} setCartItems ={setCartItems}></CartItems>
         <CartTotal items={cartItems}></CartTotal>
       </div>
     </div>

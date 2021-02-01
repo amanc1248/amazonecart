@@ -14,10 +14,11 @@ function CartTotal({ items }) {
 
   // For total cart Items
   const getTotalCartItems = () => {
-    var totalCartItems = 0;
+    let totalCartItems = 0;
     items.forEach((item) => {
       return (totalCartItems += item.quantity);
     });
+
     return totalCartItems;
   };
   return (

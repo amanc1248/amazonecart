@@ -1,6 +1,14 @@
 import React from "react";
 import "./CartItem.css";
-function CartItem({ title, stock, image, price, quantity }) {
+function CartItem({
+  title,
+  stock,
+  image,
+  price,
+  quantity,
+  changeCartQuantity,
+  index
+}) {
   return (
     <div className="cartItem">
       <div className="cartItem-Image">
@@ -16,11 +24,23 @@ function CartItem({ title, stock, image, price, quantity }) {
         <div className="info-stock">{stock}</div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select name="" id="" className="item-quantity-stock">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+            <select
+              name=""
+              id=""
+              value={quantity}
+              className="item-quantity-stock"
+              onChange={(e) => {
+                changeCartQuantity(e,index);
+              }}
+            >
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
+              <option value="4">Qty: 4</option>
+              <option value="5">Qty: 5</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
+              <option value="4">Qty: 4</option>
             </select>
           </div>
           <div className="item-action-divider">|</div>
