@@ -3,6 +3,7 @@
   flex: 0.7;
   text-align: left;
   margin-right: 18px;
+  margin-bottom: 18px;
   padding: 20px;
 }
 .cartItem {
@@ -50,4 +51,13 @@
 .cartItem-Image img {
   object-fit: contain;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .cartItem {
+    flex-direction: column;
+  }
+  .cartItems {
+    margin-right: 0;
+  }
 }
